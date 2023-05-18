@@ -6,19 +6,20 @@ namespace TubesKPL
 {
     class program
     {
+        
         public static void Main(string[] args)
         {
             SistemAkun akun = new SistemAkun();
-            akun.currentState = SistemAkun.State.Start;
+            akun.currentState = SistemAkun.StateAkun.Start;
 
             Console.WriteLine("Selamat datang.");
 
-            while (akun.currentState != SistemAkun.State.End)
+            while (akun.currentState != SistemAkun.StateAkun.Keluar)
             {
                 Console.WriteLine("Pilih Menu:");
                 Console.WriteLine("1. Registrasi");
                 Console.WriteLine("2. Login");
-                Console.WriteLine("3. End");
+                Console.WriteLine("3. Keluar");
                 Console.WriteLine("Pilih: ");
                 int selection = Convert.ToInt32(Console.ReadLine());
 
